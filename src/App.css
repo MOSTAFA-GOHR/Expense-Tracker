@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cdcdcd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    flex-direction: column;
+    max-width: 400px;
+    margin-top: 100px;
+}
+.title{
+    font-size: 30px;
+    color: #3a3a3a;
+}
+.container {
+    margin: 20px auto;
+    width: 400px;
+    padding: 10px;
+}
+.expense-and-income{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.header-expense{
+    color:#e74c3c ;
+}
+.header-income{
+    color:#2ecc2e;
+}
+.hr{
+    width:5px;
+    height: 40px;
+    background-color: #441616;
+}
+.transaction-list{
+    margin: 20px auto;
+    width: 100%;
+
+}
+.h-h{
+    width: 100%;
+    height: 3px;
+    background-color: #441616;
+    margin: 10px 0;
+}
+.list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.list #li-list{
+    background-color: #fff;
+    padding: 10px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 10px 0;
+}    
+
+.list #li-list::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+}    
+.list #li-list.plus::after{
+    background-color: #2ecc2e;
+}  
+.list #li-list.minus::after{
+    background-color: #e74c3c;
+}  
+.list #li-list .btn-deleted{
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    height: 30px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.list #li-list:hover .btn-deleted{
+    opacity: 1;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.form label{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.form input{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.form input:focus{
+    outline: none;
+}
+.form .btn{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: rgb(59, 59, 212);
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+    
+}
